@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import "tailwindcss";
+
+/* ── Register CSS variables as Tailwind theme tokens (v4) ── */
+@theme {
+  --color-teal:        var(--teal);
+  --color-teal-dark:   var(--teal-dark);
+  --color-teal-light:  var(--teal-light);
+  --color-teal-mid:    var(--teal-mid);
+  --color-bg:          var(--bg);
+  --color-card:        var(--card-bg);
+  --color-nav:         var(--nav-bg);
+  --color-border:      var(--border);
+  --color-primary:     var(--text);
+  --color-muted:       var(--text-muted);
+  --color-btn-text:    var(--button-text);
+
+  --font-sans:  "Outfit", ui-sans-serif, sans-serif;
+  --font-mono:  "Space Mono", ui-monospace, monospace;
+}
+
+/* ── Design Tokens ── */
+:root {
+  --bg: #090d16;
+  --bg-gradient: radial-gradient(circle at 50% 50%, #111a2e 0%, #090d16 100%);
+  --text: #f3f4f6;
+  --text-muted: #9ca3af;
+  --teal: #5aaa9b;
+  --teal-light: rgba(90, 170, 155, 0.12);
+  --teal-mid: rgba(90, 170, 155, 0.25);
+  --teal-dark: #3d8a7c;
+  --border: rgba(90, 170, 155, 0.15);
+  --card-bg: rgba(17, 26, 46, 0.6);
+  --nav-bg: rgba(9, 13, 22, 0.85);
+  --shadow: rgba(0, 0, 0, 0.4);
+  --button-text: #090d16;
+
+  --font-mono: "Space Mono", monospace;
+  --font-sans: "Outfit", sans-serif;
+
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="light"] {
+  --bg: #f8fafc;
+  --bg-gradient: radial-gradient(circle at 50% 50%, #f1f5f9 0%, #f8fafc 100%);
+  --text: #0f172a;
+  --text-muted: #64748b;
+  --teal: #3d8a7c;
+  --teal-light: rgba(61, 138, 124, 0.08);
+  --teal-mid: rgba(61, 138, 124, 0.18);
+  --teal-dark: #265d53;
+  --border: rgba(61, 138, 124, 0.2);
+  --card-bg: rgba(255, 255, 255, 0.75);
+  --nav-bg: rgba(248, 250, 252, 0.85);
+  --shadow: rgba(61, 138, 124, 0.06);
+  --button-text: #ffffff;
+}
+
+/* ── Base ── */
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+} */
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg);
+  background-image: var(--bg-gradient);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: var(--transition);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--teal-mid); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--teal); }
+
+
