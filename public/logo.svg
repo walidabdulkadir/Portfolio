@@ -1,0 +1,26 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 100 100"
+  width="100"
+  height="100"
+>
+  <!-- Background -->
+  <rect
+    width="100"
+    height="100"
+    rx="22"
+    fill="#59B3A5"
+  />
+
+  <!-- WA Monogram -->
+  <text
+    x="50"
+    y="63"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="35"
+    font-weight="800"
+    text-anchor="middle"
+    fill="#0B101B"
+    letter-spacing="-2"
+  >WA</text>
+</svg>
