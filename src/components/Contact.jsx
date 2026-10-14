@@ -16,7 +16,7 @@ const SOCIAL_LINKS = [
   { icon: <BsLinkedin  size={18} />, href: "https://linkedin.com/in/walid-abdulkadir-70529a2a2",   label: "Linkedin"   },
   { icon: <BsTelegram  size={18} />, href: "https://t.me/walidjr_10",   label: "Telegram"  },
   { icon: <BsGithub    size={18} />, href: "https://github.com/walidabdulkadir",   label: "GitHub"    },
-  { icon: <BsTwitterX  size={18} />, href: "https://x.com/walidjr_10",   label: "Twitter"   },
+  { icon: <BsTwitterX  size={18} />, href: "https://x.com/Walidjr_10",   label: "Twitter"   },
 ];
 
 const INFO_ITEMS = [
