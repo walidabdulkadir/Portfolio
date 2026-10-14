@@ -1,16 +1,81 @@
-# React + Vite
+# Walid Abdulkadir — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio website built with React, Tailwind CSS, and Vite. Features a dark/light theme, smooth scroll navigation, animated skill ticker, and a fully responsive layout.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
 
-## React Compiler
+- **React 19** — component-based UI
+- **Tailwind CSS v4** — utility-first styling via Vite plugin
+- **Vite 8** — fast dev server and build tool
+- **react-icons** — icon library (Simple Icons + Bootstrap Icons)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+src/
+├── assets/
+│ ├── files/ # CV PDF
+│ └── images/ # Project screenshots
+├── components/
+│ ├── projects/
+│ │ ├── data.js # Project data (title, tags, links, images)
+│ │ ├── Project.jsx # Projects section
+│ │ └── ProjectCard.jsx # Individual project card
+│ ├── About.jsx
+│ ├── Clock.jsx
+│ ├── Contact.jsx
+│ ├── Footer.jsx
+│ ├── Home.jsx
+│ ├── Nav.jsx
+│ └── Ticker.jsx
+├── App.jsx
+├── index.css # Design tokens + Tailwind @theme
+└── main.jsx
+
+---
+
+## Features
+
+- **Dark mode by default** — toggled via `data-theme="light"` on `<html>`, driven by CSS custom properties
+- **Clock topbar** — shows greeting, date, and live time; dismissible with a close button
+- **Scroll spy** — active nav link updates as you scroll through sections
+- **Skill ticker** — infinite scrolling marquee with tech icons
+- **Project cards** — thumbnail, tags, GitHub and live demo links
+- **Contact form** — controlled inputs with a success message on submit
+- **CV download** — links directly to the PDF in assets
+
+---
+
+## Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+---
+
+## Customization
+
+| What             | Where                                                      |
+| ---------------- | ---------------------------------------------------------- |
+| Projects         | `src/components/projects/data.js`                          |
+| Skills in ticker | `src/components/Ticker.jsx`                                |
+| Social links     | `src/components/Home.jsx` and `src/components/Contact.jsx` |
+| Color tokens     | `src/index.css` — `:root` and `[data-theme="light"]`       |
+| CV file          | `src/assets/files/`                                        |
+| Project images   | `src/assets/images/`                                       |
+
+---
