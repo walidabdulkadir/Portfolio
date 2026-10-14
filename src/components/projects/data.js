@@ -1,4 +1,4 @@
-import dwello  from "../../assets/images/Dwello.png";
+import dwello from "../../assets/images/Dwello.png";
 import addidas from "../../assets/images/Addidas.png";
 import netflix from "../../assets/images/Netflix.png";
 
@@ -23,7 +23,7 @@ export const PROJECTS = [
     liveUrl: "https://shoesstore-tau.vercel.app/",
     repoUrl: "https://github.com/walidabdulkadir/AdidasWebsite",
   },
-  
+
   {
     id: "03",
     title: "Netflix  Clone",
@@ -31,8 +31,7 @@ export const PROJECTS = [
       "A Netflix homepage clone built with React and Tailwind CSS, featuring responsive design, movie browsing capabilities, and a sleek UI that mirrors Netflix's modern aesthetic.",
     tags: ["REACT", "JAVASCRIPT", "TAILWIND"],
     image: netflix,
-    liveUrl: "#",
+    liveUrl: "https://movie-streaming-app-snowy.vercel.app/",
     repoUrl: "https://github.com/walidabdulkadir/Netflix-Clone",
   },
- 
 ];

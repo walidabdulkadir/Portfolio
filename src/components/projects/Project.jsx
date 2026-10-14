@@ -3,8 +3,7 @@ import { PROJECTS } from "./data";
 
 function Project() {
   return (
-    <section id="project" className="py-24 px-8 max-w-[1100px] mx-auto">
-
+    <section id="project" className="py-24 px-8 max-w-1100px mx-auto">
       {/* Section label */}
       <div className="flex items-center gap-4 mb-14">
         <span className="font-mono text-sm font-bold tracking-[0.25em] text-teal">
@@ -19,7 +18,6 @@ function Project() {
           <ProjectCard key={project.id} {...project} />
         ))}
       </div>
-
     </section>
   );
 }
