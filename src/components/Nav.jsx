@@ -10,9 +10,10 @@ const NAV_LINKS = [
 ];
 
 function Nav() {
-  const [isLight, setIsLight] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [activeSection, setActive] = useState("home");
+  const [isLight, setIsLight]       = useState(false);
+  const [menuOpen, setMenuOpen]     = useState(false);
+  const [activeSection, setActive]  = useState("home");
+  const [showClock, setShowClock]   = useState(true);
 
   // data-theme attribute drives CSS variable switching
   useEffect(() => {
@@ -48,14 +49,23 @@ function Nav() {
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-1000">
+    <div className="fixed top-0 left-0 right-0 z-1000 ">
       {/* ── Clock topbar ── */}
-      <div className="flex justify-center items-center h-7 bg-nav border-b border-border backdrop-blur-md">
-        <Clock />
-      </div>
+      {showClock && (
+        <div className="flex items-center h-7 bg-nav border-b border-border backdrop-blur-md px-4">
+          <Clock />
+          <button
+            onClick={() => setShowClock(false)}
+            aria-label="Close topbar"
+            className="ml-4 flex-shrink-0 text-muted hover:text-teal transition-colors duration-300 leading-none"
+          >
+            ✕
+          </button>
+        </div>
+      )}
 
       {/* ── Main nav ── */}
-      <nav className="flex items-center justify-between px-16 h-70px bg-nav border-b border-border backdrop-blur-md transition-all duration-300 max-[1024px]:px-8 max-[768px]:px-6">
+      <nav className="flex items-center justify-between px-30 py-4 h-70px bg-nav border-b border-border backdrop-blur-md transition-all duration-300 max-[1024px]:px-8 max-[768px]:px-6">
         {/* Logo */}
         <a href="#home" aria-label="Go to home">
           <div className="flex items-center justify-center w-9 h-9 font-mono font-bold text-base text-btn-text bg-teal rounded-lg transition-all duration-300 hover:-rotate-8deg hover:scale-105">
@@ -64,14 +74,14 @@ function Nav() {
         </a>
 
         {/* Pill nav — hidden on mobile */}
-        <div className="flex items-center gap-1 border border-border rounded-[30px] p-1 bg-card max-[600px]:hidden">
+        <div className="flex items-center gap-2 border border-border rounded-[30px] p-1.5 bg-card max-[600px]:hidden">
           {NAV_LINKS.map(({ label, href }) => {
             const isActive = activeSection === href.slice(1);
             return (
               <a
                 key={href}
                 href={href}
-                className={`font-mono text-xs font-bold tracking-0.1em px-18px py-2 rounded-[20px] transition-all duration-300
+                className={`font-mono text-xs font-bold tracking-[0.1em] px-6 py-2 rounded-[20px] transition-all duration-300
                   ${
                     isActive
                       ? "text-primary bg-teal-light"
@@ -90,9 +100,9 @@ function Nav() {
           <button
             onClick={() => setIsLight((p) => !p)}
             aria-label="Toggle theme"
-            className="flex items-center justify-center w-38px h-38px rounded-full border border-border text-primary bg-transparent transition-all duration-300 hover:bg-teal-light hover:border-teal hover:text-teal hover:rotate-15deg"
+            className="flex items-center justify-center p-1 w-50px h-50px rounded-full border border-border text-primary bg-transparent transition-all duration-300 hover:bg-teal-light hover:border-teal hover:text-teal hover:rotate-15deg"
           >
-            {isLight ? <BsMoon size={16} /> : <BsSun size={16} />}
+            {isLight ? <BsMoon size={20} /> : <BsSun size={20} />}
           </button>
 
           {/* Hamburger — mobile only */}
