@@ -95,4 +95,15 @@ a {
 ::-webkit-scrollbar-thumb { background: var(--teal-mid); border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--teal); }
 
+/* ── Ticker animation ── */
+@keyframes ticker-anim {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  animation: ticker-anim 25s linear infinite;
+  width: max-content;
+}
+
 

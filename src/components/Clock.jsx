@@ -33,11 +33,11 @@ function Clock() {
   const greeting   = getGreeting(hours);
 
   return (
-    <div className="flex items-center justify-between w-full px-6 py-15 m-10">
+    <div className="flex items-center justify-between w-full px-6 py-35 m-10">
 
       {/* Greeting */}
       <span className="font-mono text-[11px] font-bold tracking-[0.12em] text-teal">
-        {greeting} 👋
+        {greeting} 
       </span>
 
       {/* Date */}
