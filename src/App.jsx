@@ -1,10 +1,10 @@
 import Nav from "./components/Nav";
 import Home from "./components/Home";
 import Ticker from "./components/Ticker";
-// import  Contact from "./components/Contact";
-// import  Project  from "./components/projects/ProjectCard";
-// import  About  from "./components/About";
-// import  Footer  from "./components/Footer";
+import About from "./components/About";
+import Project from "./components/projects/Project";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -12,10 +12,10 @@ function App() {
       <Nav />
       <Home />
       <Ticker />
-      {/* <About />
+      <About />
       <Project />
       <Contact />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 }
