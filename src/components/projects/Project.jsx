@@ -1,68 +1,26 @@
+import ProjectCard from "./ProjectCard";
+import { PROJECTS } from "./data";
+
 function Project() {
   return (
-    <>
-      <section id="project">
-        <div className="section-label">
-          <div className="section-label-text">PROJECT</div>
-          <div className="section-label-line"></div>
-        </div>
-        <div className="project-card">
-          <div className="project-thumb">
-            <div className="project-thumb-label">
-              <img alt="" />
-            </div>
-            <div className="project-thumb-num">01</div>
-          </div>
-          <div className="project-body">
-            <div className="project-tags">
-              <div className="project-tag">NODE.JS</div>
-              <div className="project-tag">MYSQL</div>
-              <div className="project-tag">EXPRESS</div>
-              <div className="project-tag">BOOTSTRAP</div>
-            </div>
-            <div className="project-title">Student Management System</div>
-            <div className="project-desc">
-              A full-stack web application for managing student records with
-              CRUD operations, MySQL database, and a responsive Bootstrap
-              frontend.
-            </div>
-            <div className="project-footer">
-              <div></div>
-              <a href="#arrow" className="arrow">
-                <div className="project-arrow">→</div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="project-card">
-          <div className="project-thumb">
-            <div className="project-thumb-label">
-              <img alt="" />
-            </div>
-            <div className="project-thumb-num">02</div>
-          </div>
-          <div className="project-body">
-            <div className="project-tags">
-              <div className="project-tag">HTML</div>
-              <div className="project-tag">CSS</div>
-              <div className="project-tag">JAVASCRIPT</div>
-            </div>
-            <div className="project-title">WEATHER APP</div>
-            <div className="project-desc">
-              A full-stack web application for managing student records with
-              CRUD operations, MySQL database, and a responsive Bootstrap
-              frontend.
-            </div>
-            <div className="project-footer">
-              <div></div>
-              <a href="#arrow" className="arrow">
-                <div className="project-arrow">→</div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
+    <section id="project" className="py-24 px-8 max-w-[1100px] mx-auto">
+
+      {/* Section label */}
+      <div className="flex items-center gap-4 mb-14">
+        <span className="font-mono text-sm font-bold tracking-[0.25em] text-teal">
+          PROJECTS
+        </span>
+        <div className="flex-1 h-px bg-border" />
+      </div>
+
+      {/* Grid */}
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-10">
+        {PROJECTS.map((project) => (
+          <ProjectCard key={project.id} {...project} />
+        ))}
+      </div>
+
+    </section>
   );
 }
 
